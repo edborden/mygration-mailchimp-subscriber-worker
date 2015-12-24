@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "iron_worker": "^0.1.6",
+    "mailchimp": "^1.1.4"
+  }
+}
