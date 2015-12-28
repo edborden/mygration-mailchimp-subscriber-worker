@@ -1,8 +1,5 @@
-
 var iron_worker = require('iron_worker');
 console.log(iron_worker.params());
-console.log(iron_worker.config());
-console.log(iron_worker.taskId());
 
 var MailChimpAPI = require('mailchimp').MailChimpAPI;
 
@@ -14,7 +11,12 @@ try {
   console.log(error.message);
 }
 
-api.call('lists', 'list', { start: 0, limit: 25 }, function (error, data) {
+api.call('lists', 'subscribe', { 
+  email: {
+    email: params().email
+  },
+  double_optin: false
+}, function (error, data) {
   if (error)
     console.log(error.message);
   else
