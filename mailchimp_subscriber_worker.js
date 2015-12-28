@@ -11,7 +11,8 @@ try {
   console.log(error.message);
 }
 
-api.call('lists', 'subscribe', { 
+api.call('lists', 'subscribe', {
+  id: "ef1bd99125",
   email: {
     email: iron_worker.params().email
   },
