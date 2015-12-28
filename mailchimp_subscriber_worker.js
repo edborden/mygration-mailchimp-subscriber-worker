@@ -13,7 +13,7 @@ try {
 
 api.call('lists', 'subscribe', { 
   email: {
-    email: params().email
+    email: iron_worker.params().email
   },
   double_optin: false
 }, function (error, data) {
